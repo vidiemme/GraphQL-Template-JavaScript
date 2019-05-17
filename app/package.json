@@ -1,0 +1,46 @@
+{
+	"name": "my-server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./src/server.js",
+		"mock": "NODE_ENV='mock' node ./src/server.js",
+		"test": "NODE_ENV='test' ./node_modules/.bin/mocha './src//api/**/test*.js'",
+		"testf": "NODE_ENV='test' ./node_modules/.bin/mocha './src/api/**/test*.js' -g"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"1.1.0": "^1.0.0",
+		"apollo-server-express": "^2.5.0",
+		"body-parser": "^1.19.0",
+		"compression": "^1.7.4",
+		"cors": "^2.8.5",
+		"dotenv": "^8.0.0",
+		"express": "^4.17.0",
+		"express-graphql": "^0.8.0",
+		"graphql": "^14.3.0",
+		"graphql-fields": "^2.0.3",
+		"graphql-tools": "^4.0.4",
+		"helmet": "^3.18.0",
+		"jsonwebtoken": "^8.5.1",
+		"lodash": "^4.17.11",
+		"merge-graphql-schemas": "^1.5.8",
+		"module-alias": "^2.2.0",
+		"moment": "^2.24.0",
+		"npm": "^6.9.0",
+		"request-promise": "^4.2.4",
+		"uuid": "^3.3.2"
+	},
+	"devDependencies": {
+		"chai": "^4.2.0",
+		"mocha": "^6.1.4",
+		"supertest": "^4.0.2"
+	},
+	"_moduleAliases": {
+		"@root": "./src",
+		"@api": "./src/api",
+		"@utils": "./src/api/Utils"
+	}
+}

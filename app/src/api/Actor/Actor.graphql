@@ -1,0 +1,21 @@
+type Query {
+	actors: [Actor!]!
+	actor(id: String!): Actor
+	findActors(query: String!): [Actor!]!
+}
+
+type Mutation {
+	addActor(actor: ActorInput!): Actor!
+	deleteActor(id: String!): Actor!
+}
+
+input ActorInput {
+	name: String!
+	surname: String!
+}
+
+type Actor {
+	id: String!
+	name: String!
+	surname: String!
+}
