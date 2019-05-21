@@ -1,9 +1,20 @@
 const ActorConnector = require("./ActorConnector");
-
+let dataHandler = require("./ActorDataHandler");
 module.exports = {
 	
+	get dataHandler() { return dataHandler },
+
+	/**
+	 * 
+	 * @param {ActorDataHandler} newProvider 
+	 */
+    setDataHandler(newProvider) {
+        dataHandler = newProvider;
+	},
+	
     actors: async function(fields) {
-        return ActorConnector.actors();
+		let actors = await ActorConnector.actors();
+		return await this.dataHandler.actors(fields, actors)
     },
 
     /**
@@ -11,7 +22,8 @@ module.exports = {
      * @param {[String]} fields 
      */
     actor: async function(id, fields) {
-        return await ActorConnector.actor(id);
+		let actor = await ActorConnector.actor(id);
+		return await this.dataHandler.actor(id, fields, actor);
     },
 
     /**
@@ -20,6 +32,7 @@ module.exports = {
      * @param {[String]} fields 
      */
     findActors: async function(query, fields) {
-        return await ActorConnector.findActors(query);
+		let actors = await ActorConnector.findActors(query);
+		return await this.dataHandler.findActors(query, fields, actors);
     }
 }

@@ -5,7 +5,6 @@ const { mergeTypes } = require('merge-graphql-schemas');
 
 const CustomTypes = require('./Utils/CustomTypes');
 const ActorsAPI = require('./Actor/Actor');
-const LandingAPI = require('./Landing/Landing');
 
 module.exports = {
     
@@ -17,17 +16,15 @@ module.exports = {
         //Entry point for adding APIs
         let result = merge(
             CustomTypes.resolvers,
-            ActorsAPI.resolvers,
-            LandingAPI.resolvers
-        );
+			ActorsAPI.resolvers
+		);
         return result;
     },
 
     buildSchema: function() {
         let schema = mergeTypes([
             CustomTypes.buildSchema(),
-            ActorsAPI.buildSchema(),
-            LandingAPI.buildSchema()
+            ActorsAPI.buildSchema()
         ]);
         return schema;
     }
