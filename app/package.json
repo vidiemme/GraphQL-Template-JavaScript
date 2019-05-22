@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node ./src/server.js",
 		"mock": "NODE_ENV='mock' node ./src/server.js",
-		"test": "NODE_ENV='test' ./node_modules/.bin/mocha './src//api/**/test*.js'",
+		"test": "NODE_ENV='test' ./node_modules/.bin/mocha './src/api/**/test*.js'",
 		"testf": "NODE_ENV='test' ./node_modules/.bin/mocha './src/api/**/test*.js' -g"
 	},
 	"author": "",

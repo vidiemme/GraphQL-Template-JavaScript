@@ -9,7 +9,9 @@ const ActorsAPI = require('./Actor/Actor');
 module.exports = {
     
     prepareForTest: function() {
-        ActorsAPI.setDataProvider(require('./Actor/MockActorDataProvider'));
+		let dataProvider = ActorsAPI.dataProvider;
+		dataProvider.setActorConnector(require('./Actor/MockActorConnector'));
+		dataProvider.setDataHandler(require('./Actor/MockActorDataHandler'));
     },
 
     buildResolvers: function(args) {

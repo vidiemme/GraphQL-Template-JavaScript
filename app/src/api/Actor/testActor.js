@@ -1,4 +1,7 @@
-const dataProvider = require('./MockActorDataProvider');
+let dataProvider = require('./ActorDataProvider');
+dataProvider.setActorConnector(require('./MockActorConnector'));
+dataProvider.setDataHandler(require('./MockActorDataHandler'));
+
 const assert = require('assert');
 let Server = require('../../server');
 var ServerConstants = require("@root/ServerConstants");
@@ -23,7 +26,7 @@ describe('#Actors', function () {
         it('Responds with actors', async function () {
             const actors = await dataProvider.actors();
             assert(Array.isArray(actors), "Actors doesn't look like an array");
-            assert(actors.length == 7, "There should be exactly 7 actors, found "+actors.length);
+            assert(actors.length == 6, "There should be exactly 6 actors, found "+actors.length);
         });
     });
     
@@ -37,7 +40,7 @@ describe('#Actors', function () {
                 if (err) return done(err);
                 const actors = res.body.data.actors;
                 assert(Array.isArray(actors), "Actors doesn't look like an array");
-                assert(actors.length == 7, "There should be exactly 7 actors, found "+actors.length);
+                assert(actors.length == 6, "There should be exactly 6 actors, found "+actors.length);
                 done();
             })  
         })
