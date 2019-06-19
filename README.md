@@ -15,7 +15,7 @@ The `server.js` is the entry point, here you can configure your server.
 `ServerConstants.js` defines all the constants in your project.
 The `api` folder contains all the API modules, all the routes are instantiated in the `APIConstants.js` file, each "route" should be added in a proper module.
 
-A module is not just a single `Module.js`, but a bunch of files that compose the module itself. If you want to make a new module in a whistle, we suggest to install and use the [GraphQL Module Template](https://github.com/vidiemme/GraphQL-Module-Template).
+A module is not just a single `Module.js`, but a bunch of files that compose the module itself. If you want to make a new module in a whistle, we suggest to install and use the [JS GraphQL Module Template](https://github.com/vidiemme/JS-GraphQL-Module-Template).
 
 When you add and expose a new module (graphQL), just add it to the `APIConstants.js`, following the `Actor` example module.
 
