@@ -1,15 +1,18 @@
 # GraphQL API Template
 
-Backend entry point for almost any project based on GraphQL
+> Backend entry point for almost any project based on GraphQL
 
 ## Install
 
-- Clone the project and change the name in `app/package.json`
-- `cd app`
-- `npm install`
-- `npm start`
+Clone the project and change the name in `app/package.json`
 
-## Usage
+```sh
+$ cd app
+$ npm install
+$ npm start
+```
+
+## Usage example
 
 The `server.js` is the entry point, here you can configure your server.
 `ServerConstants.js` defines all the constants in your project.
@@ -19,29 +22,26 @@ A module is not just a single `Module.js`, but a bunch of files that compose the
 
 When you add and expose a new module (graphQL), just add it to the `APIConstants.js`, following the `Actor` example module.
 
+## Release History
 
+* 0.1.0
+    * Upgraded dependencies
+    * CHANGE: Readme.md
 
-# License
+* 0.0.1
+    * Work in progress
 
-The MIT License
+## Meta
+Vidiemme - [www.vidiemme.it](https://www.vidiemme.it) - info@vidiemme.it
 
-Copyright (c) 2019-2022 Vidiemme Consulting SRL https://vidiemme.it 
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+[https://github.com/vidiemme/](https://github.com/vidiemme/)
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+## Contributing
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
+1. Fork it (<https://github.com/vidiemme/TS-Express-Project-Template/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
