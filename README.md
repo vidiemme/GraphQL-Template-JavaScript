@@ -1,4 +1,4 @@
-# GraphQL API Template
+# GraphQL API Template - JavaScript
 
 > Backend entry point for almost any project based on GraphQL
 
